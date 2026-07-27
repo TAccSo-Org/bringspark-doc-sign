@@ -10,7 +10,8 @@ import { getSiteSetting } from '../site-settings/get-site-setting';
 import { SITE_SETTINGS_TELEMETRY_ID } from '../site-settings/schemas/telemetry';
 import { upsertSiteSetting } from '../site-settings/upsert-site-setting';
 
-const HAS_LICENSE_KEY = !!process.env.NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY;
+const HAS_LICENSE_KEY =
+  !!process.env.NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY || !!process.env.NEXT_PRIVATE_DOCUMENSO_LICENSE_KEY;
 
 const TELEMETRY_KEY = process.env.NEXT_PRIVATE_TELEMETRY_KEY;
 const TELEMETRY_HOST = process.env.NEXT_PRIVATE_TELEMETRY_HOST;

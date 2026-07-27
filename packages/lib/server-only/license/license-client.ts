@@ -15,7 +15,7 @@ import {
 import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '../../types/subscription';
 import { env } from '../../utils/env';
 
-const LICENSE_KEY = env('NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY');
+const LICENSE_KEY = env('NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY') || env('NEXT_PRIVATE_DOCUMENSO_LICENSE_KEY');
 const LICENSE_SERVER_URL = env('INTERNAL_OVERRIDE_LICENSE_SERVER_URL') || 'https://license.bringspark.com';
 
 declare global {

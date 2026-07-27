@@ -86,7 +86,7 @@ COPY turbo.json turbo.json
 
 RUN npm install -g "turbo@^2.10.0"
 
-RUN turbo run build --filter=@documenso/remix...
+RUN turbo run build --filter=@documenso/remix... --output-logs=full
 
 ###########################
 #     RUNNER CONTAINER    #

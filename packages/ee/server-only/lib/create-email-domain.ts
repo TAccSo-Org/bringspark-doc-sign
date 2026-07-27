@@ -1,5 +1,5 @@
 import { CreateEmailIdentityCommand, SESv2Client } from '@aws-sdk/client-sesv2';
-import { DOCUMENSO_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
+import { BRINGSPARK_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
 import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
 import { symmetricEncrypt } from '@documenso/lib/universal/crypto';
 import { generateDatabaseId } from '@documenso/lib/universal/id';
@@ -61,13 +61,13 @@ type DomainRecord = {
 };
 
 export const createEmailDomain = async ({ domain, organisationId }: CreateEmailDomainOptions) => {
-  const encryptionKey = DOCUMENSO_ENCRYPTION_KEY;
+  const encryptionKey = BRINGSPARK_ENCRYPTION_KEY;
 
   if (!encryptionKey) {
-    throw new Error('Missing DOCUMENSO_ENCRYPTION_KEY');
+    throw new Error('Missing BRINGSPARK_ENCRYPTION_KEY');
   }
 
-  const selector = `documenso-${organisationId}`.replace(/[_.]/g, '-');
+  const selector = `bringspark-${organisationId}`.replace(/[_.]/g, '-');
   const recordName = `${selector}._domainkey.${domain}`;
 
   // Check if domain already exists
