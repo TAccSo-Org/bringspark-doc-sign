@@ -6,7 +6,7 @@ import crypto from 'crypto';
 import { createElement } from 'react';
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';
-import { DOCUMENSO_INTERNAL_EMAIL } from '../../../constants/email';
+import { BRINGSPARK_INTERNAL_EMAIL } from '../../../constants/email';
 import { ONE_DAY } from '../../../constants/time';
 import { renderEmailWithI18N } from '../../../utils/render-email-with-i18n';
 import type { JobRunIO } from '../../client/_internal/job';
@@ -59,8 +59,8 @@ export const run = async ({ payload, io }: { payload: TSendAdminUserCreatedEmail
       address: user.email,
       name: user.name || '',
     },
-    from: DOCUMENSO_INTERNAL_EMAIL,
-    subject: i18n._(msg`Welcome to Documenso`),
+    from: BRINGSPARK_INTERNAL_EMAIL,
+    subject: i18n._(msg`Welcome to BringSpark`),
     html,
     text,
   });

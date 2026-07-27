@@ -1,22 +1,22 @@
 import { env } from '../utils/env';
 
-export const DOCUMENSO_ENCRYPTION_KEY = env('NEXT_PRIVATE_ENCRYPTION_KEY');
+export const BRINGSPARK_ENCRYPTION_KEY = env('NEXT_PRIVATE_ENCRYPTION_KEY');
 
-export const DOCUMENSO_ENCRYPTION_SECONDARY_KEY = env('NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY');
+export const BRINGSPARK_ENCRYPTION_SECONDARY_KEY = env('NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY');
 
 // if (typeof window === 'undefined') {
-//   if (!DOCUMENSO_ENCRYPTION_KEY || !DOCUMENSO_ENCRYPTION_SECONDARY_KEY) {
-//     throw new Error('Missing DOCUMENSO_ENCRYPTION_KEY or DOCUMENSO_ENCRYPTION_SECONDARY_KEY keys');
+//   if (!BRINGSPARK_ENCRYPTION_KEY || !BRINGSPARK_ENCRYPTION_SECONDARY_KEY) {
+//     throw new Error('Missing BRINGSPARK_ENCRYPTION_KEY or BRINGSPARK_ENCRYPTION_SECONDARY_KEY keys');
 //   }
 
-//   if (DOCUMENSO_ENCRYPTION_KEY === DOCUMENSO_ENCRYPTION_SECONDARY_KEY) {
+//   if (BRINGSPARK_ENCRYPTION_KEY === BRINGSPARK_ENCRYPTION_SECONDARY_KEY) {
 //     throw new Error(
-//       'DOCUMENSO_ENCRYPTION_KEY and DOCUMENSO_ENCRYPTION_SECONDARY_KEY cannot be equal',
+//       'BRINGSPARK_ENCRYPTION_KEY and BRINGSPARK_ENCRYPTION_SECONDARY_KEY cannot be equal',
 //     );
 //   }
 // }
 
-// if (DOCUMENSO_ENCRYPTION_KEY === 'CAFEBABE') {
+// if (BRINGSPARK_ENCRYPTION_KEY === 'CAFEBABE') {
 //   console.warn('*********************************************************************');
 //   console.warn('*');
 //   console.warn('*');

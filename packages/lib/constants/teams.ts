@@ -76,7 +76,7 @@ export const PROTECTED_TEAM_URLS = [
   'criminal',
   'dashboard',
   'docs',
-  'documenso',
+  'bringspark',
   'documentation',
   'document',
   'documents',

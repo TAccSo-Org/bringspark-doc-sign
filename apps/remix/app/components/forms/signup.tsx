@@ -392,7 +392,7 @@ export const SignUpForm = ({
               <p className="mt-4 text-muted-foreground text-sm">
                 <Trans>
                   Already have an account?{' '}
-                  <Link to="/signin" className="text-documenso-700 duration-200 hover:opacity-70">
+                  <Link to="/signin" className="text-bringspark-700 duration-200 hover:opacity-70">
                     Sign in instead
                   </Link>
                 </Trans>
@@ -410,17 +410,17 @@ export const SignUpForm = ({
           <Trans>
             By proceeding, you agree to our{' '}
             <Link
-              to="https://documen.so/terms"
+              to="https://bringspark.com/terms"
               target="_blank"
-              className="text-documenso-700 duration-200 hover:opacity-70"
+              className="text-bringspark-700 duration-200 hover:opacity-70"
             >
               Terms of Service
             </Link>{' '}
             and{' '}
             <Link
-              to="https://documen.so/privacy"
+              to="https://bringspark.com/privacy"
               target="_blank"
-              className="text-documenso-700 duration-200 hover:opacity-70"
+              className="text-bringspark-700 duration-200 hover:opacity-70"
             >
               Privacy Policy
             </Link>

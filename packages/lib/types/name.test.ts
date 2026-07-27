@@ -19,9 +19,9 @@ describe('ZNameSchema', () => {
     });
 
     it('trims surrounding whitespace', () => {
-      expect(ZNameSchema.safeParse('  Documenso User  ')).toEqual({
+      expect(ZNameSchema.safeParse('  BringSpark User  ')).toEqual({
         success: true,
-        data: 'Documenso User',
+        data: 'BringSpark User',
       });
     });
 
@@ -34,7 +34,7 @@ describe('ZNameSchema', () => {
 
     it('accepts names at the maximum length', () => {
       const name =
-        'DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser Do';
+        'BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser Do';
 
       expect(name.length).toBe(100);
       expect(ZNameSchema.safeParse(name)).toEqual({
@@ -56,7 +56,7 @@ describe('ZNameSchema', () => {
 
     it('rejects names longer than 100 characters', () => {
       const name =
-        'DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser DocumensoUser Doc';
+        'BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser BringSparkUser Doc';
 
       expect(name.length).toBe(101);
       expect(ZNameSchema.safeParse(name)).toMatchObject({

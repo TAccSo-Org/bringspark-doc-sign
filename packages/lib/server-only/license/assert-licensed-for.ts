@@ -20,10 +20,10 @@ type AssertLicensedForOptions = {
 };
 
 /**
- * Assert the configured Documenso licence grants `flag`. Reads the
+ * Assert the configured BringSpark licence grants `flag`. Reads the
  * {@link LicenseClient} cache; never re-pings the licence server.
  *
- * - No `NEXT_PRIVATE_DOCUMENSO_LICENSE_KEY` → throws. No licensing intent.
+ * - No `NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY` → throws. No licensing intent.
  * - Key set, claim unverifiable (no client, null cache, read throws,
  *   `license: null`) → passes. Mirrors how org-claim gates keep running on
  *   last known state when the licence server is unreachable; paying
@@ -40,7 +40,7 @@ export const assertLicensedFor = async (flag: LicenseFlag, options?: AssertLicen
   // No licence key configured = no licensing intent. Fail closed unconditionally
   // so unlicensed instances cannot reach gated features simply because the
   // licence cache is empty.
-  if (!env('NEXT_PRIVATE_DOCUMENSO_LICENSE_KEY')) {
+  if (!env('NEXT_PRIVATE_BRINGSPARK_LICENSE_KEY')) {
     throw denied();
   }
 

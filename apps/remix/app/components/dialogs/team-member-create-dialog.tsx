@@ -190,10 +190,10 @@ export const TeamMemberCreateDialog = ({ trigger, ...props }: TeamMemberCreateDi
                       To be able to add members to a team, you must first add them to the organisation. For more
                       information, please see the{' '}
                       <Link
-                        to="https://docs.documenso.com/users/organisations/members"
+                        to="https://docs.bringspark.com/users/organisations/members"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-documenso-700 hover:text-documenso-600 hover:underline"
+                        className="text-bringspark-700 hover:text-bringspark-600 hover:underline"
                       >
                         documentation
                       </Link>
@@ -323,7 +323,7 @@ export const TeamMemberCreateDialog = ({ trigger, ...props }: TeamMemberCreateDi
                                       <Button
                                         type="button"
                                         variant="link"
-                                        className="h-auto p-0 font-medium text-documenso-700 text-sm hover:text-documenso-600"
+                                        className="h-auto p-0 font-medium text-bringspark-700 text-sm hover:text-bringspark-600"
                                       >
                                         <Trans>Invite them to the organisation first</Trans>
                                       </Button>
